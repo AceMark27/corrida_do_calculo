@@ -1,0 +1,216 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #c62828;
+    color: white;
+    padding: 250px 0;
+    text-align: center;
+}
+
+.header-content {
+    margin: auto;
+    position: relative;
+}
+
+nav {
+    background-color: #c62828;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a i {
+    margin-right: 8px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+body {
+    padding-top: 70px; /* Ajuste baseado na altura do nav */
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card, .cardAbout {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .cardAbout:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img, .card-icon {
+    width: 100px; /* Tamanho padrão para ícones pequenos */
+    height: auto;
+    border-radius: 8px 0 0 8px;
+}
+
+.cardAbout img, .cardAbout-icon {
+    width: 500px; /* Tamanho padrão para ícones pequenos */
+    height: auto;
+    border-radius: 8px 0 0 8px;
+}
+.card-content, .cardAbout-content {
+    padding: 20px;
+    flex: 1;
+    text-align: left;
+}
+
+.download-button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.download-button:hover {
+    background-color: #e60000;
+}
+
+.welcome-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #c62828;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.social-links a i {
+    margin-right: 8px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .header-content, .footer-content, main {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .card, .cardAbout {
+        flex-direction: column;
+    }
+
+    .card img, .card-icon{
+        width: 20%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .cardAbout img, .cardAbout-icon {
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+    .download-button {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
